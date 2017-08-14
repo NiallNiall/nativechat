@@ -28,7 +28,7 @@ var dist = {
   img: 'dist/img'
 }
 
-var localPort = 4000,
+var localPort = 8008,
        lrPort = 35729;
 
 gulp.task('server', function(){

@@ -1,0 +1,63 @@
+//===============================================================================
+// FOOTER
+//===============================================================================
+.gbl-foot {
+    @include clearfix;
+	background: $nhdarkblue;
+	width: 100%;
+    min-height: $alpha;
+    padding-top: 32px;
+    padding-bottom: 48px;
+    position: relative;
+    z-index: 50;
+
+    @media screen and ( max-width: $medium ) {
+        text-align: center;
+    }
+
+}
+
+.gbl-foot-legal {
+  margin-bottom: 20px;
+}
+
+.foot-info {
+    p {
+        line-height: 1.0;
+        margin-bottom: 0;
+        color: $lightpink;
+    }
+    a {
+        color: $nhpink;//lighten($nhdarkblue, 30%);
+    }
+
+    @media screen and ( max-width: $medium ) {
+        float:none;
+    }
+}
+
+
+
+.footer-social {
+
+    @media screen and ( max-width: $medium ) {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    }
+
+    .social-icon {
+
+        margin-right: 6px;
+        float: left;
+        display: block;
+
+        @media screen and ( max-width: $medium ) {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            float: none;
+        }
+    }
+
+}

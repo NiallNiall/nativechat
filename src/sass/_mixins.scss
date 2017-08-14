@@ -11,6 +11,10 @@
   }
 }
 
+.clearfix {
+  @include clearfix;
+}
+
 // HIDE TEXT
 // @include hide-text;
 @mixin hide-text {
@@ -29,4 +33,38 @@
 @mixin margin-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+// fluidBG
+// @include fluidBG
+@mixin fluidBG {
+  background: url('/img/shared/fluidgraphic-full.jpg');
+  background-size: cover;
+}
+
+.fluidBG {
+  @include fluidBG;
+}
+
+// gradientBG
+// @include gradientBG
+@mixin gradientBG {
+  background: $nhpink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($nhpink, $nhdarkblue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($nhpink, $nhdarkblue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($nhpink, $nhdarkblue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($nhpink, $nhdarkblue); /* Standard syntax */
+}
+
+
+$sunsetpink: #ffA6B2;
+$litegdclr1: #d4f0fd;//lighten(#FEE9D6, 5%);
+$litegdclr2: #ffA6B2;
+
+@mixin litegradientBG {
+  background: $nhpink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($paper, $litegdclr2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($paper, $litegdclr2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($paper, $litegdclr2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($paper, $litegdclr2); /* Standard syntax */
 }

@@ -1,0 +1,41 @@
+
+//===============================================================================
+// VARIABLES
+//===============================================================================
+// $paper:  #FEE9D6;
+// $ink:    black;
+
+$bgColour: #FCF7E9;
+
+//===============================================================================
+// BASICS
+//===============================================================================
+
+
+html,
+body {
+  background-color: $paper;
+  color: $ink;
+  font-family: sans-serif;
+  line-height: 1.4;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-header {
+  padding-top: 48px;
+}
+
+.slidr {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.active{
+	opacity: 1.0;
+}
