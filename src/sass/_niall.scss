@@ -39,3 +39,18 @@ body {
 .active{
 	opacity: 1.0;
 }
+
+$nhlightblue: #00506e;
+// nhdarkblue is #003f5d
+
+.homehero-outer.dark{
+  background:$nhlightblue;
+  .homehero-inner{
+    // transition: 0.4s;
+    background: $nhdarkblue;
+    color: white;
+  }
+  h1 {
+    color: white;
+  }
+}

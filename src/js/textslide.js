@@ -1,5 +1,6 @@
-var slideIndex = 0;
+var homeheroClr = document.getElementById("home-hero");
 
+var slideIndex = 0;
 var slides = document.getElementsByClassName("slidr");
 var sldL = slides.length - 1;
 
@@ -16,6 +17,7 @@ function nextSlide() {
 
     var thisSlide = slides[slideIndex];
     thisSlide.classList.add("active");
+    thisSlide.onchange();
 }
 
 function prevSlide() {
@@ -31,6 +33,7 @@ function prevSlide() {
 
     var thisSlide = slides[slideIndex];
     thisSlide.classList.add("active");
+    thisSlide.onchange();
 }
 
 
@@ -56,4 +59,14 @@ function checkKey(e) {
         nextSlide();
     }
 
+}
+
+function turnDark(){
+    homeheroClr.classList.add('dark');
+    changeBubbleClr('#00506e');
+}
+
+function turnLight(){
+    homeheroClr.classList.remove('dark');
+    changeBubbleClr(bubbleColour);
 }

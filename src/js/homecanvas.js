@@ -11,6 +11,8 @@ var totalBubbles = 60;
 // ================================
 
 
+
+
 // Function to return a random between two values
 function randomGap(min,max)
 {
@@ -63,6 +65,10 @@ function createBubble(initialPos) {
         bubbleShape.bounds.height = scal;
     }
 
+    function changeClr(thisClr){
+        bubbleShape.fillColor = thisClr;
+    }
+
     function moveBubble() {
         if( bubblePos.x >= canvasSize.width || bubblePos.x <= 0)
             { bubbleDirection.x = bubbleDirection.x * -1;}
@@ -99,7 +105,8 @@ function createBubble(initialPos) {
       moveBubble: moveBubble,
       removeBubble: removeBubble,
       setCanvasBounds: setCanvasBounds,
-      resizeCanvas: resizeCanvas
+      resizeCanvas: resizeCanvas,
+      changeClr: changeClr
     }
 
     return bubble;
@@ -126,6 +133,13 @@ function deleteAllBubbles(){
        bubble1.removeBubble();
     }
     bubbles = [];
+}
+
+function changeBubbleClr(thisClr){
+    for(var i=0; i <= bubbles.length-1; i ++) {
+       var bubble1 = bubbles[i];
+       bubble1.changeClr(thisClr);
+    }
 }
 
 
